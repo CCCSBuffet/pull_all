@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+#	pull_all
+#	Perry Kivolowitz
+#	Carthage College Computer Science
+#	Placed in public domain.
+#
 
 for d in *; do
 	if [ -d ${d} ]; then
