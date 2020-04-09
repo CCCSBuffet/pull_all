@@ -18,7 +18,7 @@ do
 		if [ -e ${d}/.git ]; then
 			pushd $d > /dev/null 2>&1
 			echo $d
-			if git pull | tee /tmp/git.out | grep -q 'Already up to date.'
+			if git pull | tee /tmp/git.out | grep -q 'Already up-to-date.'
 			then
 				:
 			else
