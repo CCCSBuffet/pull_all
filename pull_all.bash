@@ -15,10 +15,13 @@ fi
 for d in ${folder}
 do
 	if [ -d ${d} ]; then
+		if [ ${d:0:1} == "_" ]; then
+			continue
+		fi
 		if [ -e ${d}/.git ]; then
 			pushd $d > /dev/null 2>&1
 			echo $d
-			if git pull | tee /tmp/git.out | grep -q 'Already up-to-date.'
+			if git pull | tee /tmp/git.out | grep -q 'Already up to date.'
 			then
 				:
 			else
