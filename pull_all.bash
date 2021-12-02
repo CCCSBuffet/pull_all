@@ -27,6 +27,7 @@ function Process() {
 				fi
 				popd > /dev/null 2>&1
 			else
+				echo ">>>>> Descending into:" ${d}
 				pushd ${d} > /dev/null 2>&1
 				Process *
 				popd  > /dev/null 2>&1
