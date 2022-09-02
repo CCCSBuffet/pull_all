@@ -30,6 +30,7 @@ function Process() {
 				echo ">>>>> Descending into:" ${d}
 				pushd ${d} > /dev/null 2>&1
 				Process *
+				echo "<<<<< Rising from:" ${d}
 				popd  > /dev/null 2>&1
 			fi
 		fi
